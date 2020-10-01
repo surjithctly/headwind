@@ -18,3 +18,26 @@ body :not(pre) > code[class*="language-"],
 body pre[class*="language-"] {
   @apply bg-gray-800;
 }
+
+/*iframe stuff*/
+
+.iframe-wrap {
+  width: 1500px;
+  height: 100vh;
+  background: pink;
+  position: relative;
+  touch-action: none;
+}
+
+.resize-handle {
+  width: 18px;
+  height: 100vh;
+  background: gray;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+iframe {
+  width: 100%;
+}
