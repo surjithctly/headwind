@@ -1,9 +1,105 @@
---- 
+---
 layout: default
 title: Neat Starter
-path: home
+prism: true
+items:
+  - text: Menu One
+    url: "#"
 ---
-<div class="iframe-wrap">
-    <iframe src="components/features_2-col-icon/" scrolling="no" loading="lazy"></iframe>
-    <div class="resize-handle"></div>
+{{ item.text }}
+
+<div class="mt-6 bg-white max-w-8xl mx-auto sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="pb-2">
+            <nav class="flex items-center text-sm leading-5 font-medium">
+                <a href="/components#product-marketing" class="text-gray-500 hover:text-gray-700 focus:outline-none focus:underline transition duration-150 ease-in-out">
+                    Marketing
+                </a>
+                <svg class="flex-shrink-0 mx-2 h-5 w-5 text-gray-400" fill="currentColor" viewbox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <a href="/components#product-marketing-sections" class="text-gray-500 hover:text-gray-700 focus:outline-none focus:underline transition duration-150 ease-in-out">
+                    Page Sections
+                </a>
+            </nav>
+        </div>
+        <h2 class="text-2xl leading-8 font-semibold font-display text-gray-900 sm:text-3xl sm:leading-9">
+            Hero Sectionsdfghdhdh
+        </h2>
+    </div>
+
+    <div class="mt-6 bg-white max-w-8xl mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-8xl mx-auto">
+            <div id="component-a3c09c7a3b8f4bd90d280722eaff9634" x-data="{ activeTab: 'preview', activeSnippet: 'html' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden">
+                <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+                    <div class="flex-shrink min-w-0 flex items-center">
+                        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+                            <a href="#component-a3c09c7a3b8f4bd90d280722eaff9634">With angled image on right</a>
+                        </h3>
+                        <a href="/documentation#integrating-with-javascript-frameworks" class="hidden sm:inline ml-4 bg-pink-100 rounded-full px-2 py-0.5 flex items-center text-xs leading-4 tracking-wide uppercase font-semibold flex-shrink-0">
+                            <span class="text-pink-700">Requires JS</span>
+                        </a>
+                    </div>
+                    <div class="ml-4 flex flex-shrink-0 items-center">
+                        <div class="flex items-center text-sm sm:hidden">
+                            <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+                                <svg class="h-5 w-5" fill="currentColor" viewbox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="hidden sm:flex items-center text-sm md:text-base">
+                            <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+                                Preview
+                            </button>
+                            <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+                                Code
+                            </button>
+
+                        </div>
+                        <div class="hidden sm:flex sm:items-center">
+                            <div class="pl-4 pr-3 self-stretch">
+                                <div class="h-full border-l border-gray-200"></div>
+                            </div>
+                            <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+                                <svg class="h-5 w-5" fill="currentColor" viewbox="0 0 20 20">
+                                    <title>Copy</title>
+                                    <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+                                    <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-500">
+                    <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+
+                        <div class="iframe-wrap relative" x-data="{ resizing: false }">
+                            <iframe src="components/features_2-col-icon/" scrolling="no" loading="lazy"></iframe>
+                            <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+                            <div x-ref="handle" class="resize-handle sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+                                <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewbox="0 0 24 24">
+                                    <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+                                </svg>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+
+                        {% set iframecontent %}
+                        {%- include 'components/features_2-col-icon.njk' -%}
+                        {% endset %}
+
+                        {% highlight "html" %}
+                        {{iframecontent | safe}}
+                        {% endhighlight %}
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>

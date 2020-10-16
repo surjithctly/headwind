@@ -23,21 +23,26 @@ body pre[class*="language-"] {
 
 .iframe-wrap {
   width: 1500px;
-  height: 100vh;
-  background: pink;
+  height: 100%;
   position: relative;
   touch-action: none;
 }
 
-.resize-handle {
+/* .resize-handle {
   width: 18px;
-  height: 100vh;
+  height: auto;
   background: gray;
   position: absolute;
   right: 0;
   top: 0;
-}
+} */
 
 iframe {
   width: 100%;
+}
+
+/*  <br> Spacing hack inside <pre> */
+
+pre span + br {
+  content: " ";
 }

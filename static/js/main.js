@@ -20,6 +20,12 @@
         }),
       ],
     })
+    .on("resizestart", (event) => {
+      document.querySelector(".iframe-wrap").__x.$data.resizing = true;
+    })
+    .on("resizeend", (event) => {
+      document.querySelector(".iframe-wrap").__x.$data.resizing = false;
+    })
     .on("resizemove", (event) => {
       let { x, y } = event.target.dataset;
 
@@ -28,7 +34,6 @@
 
       Object.assign(event.target.style, {
         width: `${event.rect.width}px`,
-        height: `${event.rect.height}px`,
         transform: `translate(${event.deltaRect.left}px, ${event.deltaRect.top}px)`,
       });
 
@@ -37,5 +42,8 @@
 
   iFrameResize({
     log: true,
+    scrolling: "omit",
+    checkOrigin: !1,
+    resizeFrom: "child",
   });
 })();
